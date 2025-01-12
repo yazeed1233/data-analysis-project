@@ -1,15 +1,35 @@
-<?php
-// Connect to the SQLite database
-$db = new SQLite3('dictionary.db');
 
-// Check if the form is submitted
-if (isset($_POST['search'])) {
-    $word = $_POST['word'];
-    $stmt = $db->prepare('SELECT definition FROM dictionary WHERE word = :word');
-    $stmt->bindValue(':word', $word, SQLITE3_TEXT);
-    $result = $stmt->execute();
-    $definition = $result->fetchArray(SQLITE3_ASSOC);
+
+<?php
+// Database connection settings
+$host = 'localhost'; // Change if your MySQL server is on a different host
+$dbname = 'dictionary';
+$username = 'root'; // Change to your MySQL username
+$password = 'password'; // Change to your MySQL password
+
+// Create a connection
+$conn = new mysqli($host, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
+$definition = '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $word = $conn->real_escape_string(trim($_POST['word']));
+    $sql = "SELECT definition FROM words WHERE word = '$word'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $definition = $row['definition'];
+    } else {
+        $definition = "Word not found.";
+    }
+}
+
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -29,45 +49,34 @@ if (isset($_POST['search'])) {
         input[type="text"] {
             padding: 10px;
             width: 200px;
-            border: 2px solid #333;
-            border-radius: 5px;
+            margin-bottom: 20px;
         }
         input[type="submit"] {
             padding: 10px 20px;
-            border: none;
-            background-color: #333;
+            background-color: #4CAF50;
             color: white;
-            border-radius: 5px;
+            border: none;
             cursor: pointer;
         }
         input[type="submit"]:hover {
-            background-color: #555;
+            background-color: #45a049;
         }
         .definition {
             margin-top: 20px;
             font-size: 1.2em;
-            border: 1px solid #333;
-            padding: 10px;
-            background-color: #fff;
-            display: inline-block;
         }
     </style>
 </head>
 <body>
     <h1>Simple Dictionary</h1>
-    <form method="POST">
+    <form method="post">
         <input type="text" name="word" placeholder="Enter a word" required>
-        <input type="submit" name="search" value="Search">
+        <input type="submit" value="Search">
     </form>
-
-    <?php if (isset($definition)): ?>
-        <div class="definition">
-            <?php if ($definition): ?>
-                <strong><?php echo htmlspecialchars($word); ?></strong>: <?php echo htmlspecialchars($definition['definition']); ?>
-            <?php else: ?>
-                <strong><?php echo htmlspecialchars($word); ?></strong>: Not found.
-            <?php endif; ?>
-        </div>
-    <?php endif; ?>
+    <div class="definition">
+        <?php if ($definition): ?>
+            <p><?php echo $definition; ?></p>
+        <?php endif; ?>
+    </div>
 </body>
 </html>
