@@ -8,9 +8,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'cd data-analysis-project && ls -l'
-                sh 'docker compose down'
-                sh 'docker compose up'
+                sh 'cd data-analysis-project && docker compose down'
+                sh 'cd data-analysis-project && docker compose up'
             }
         }
     }
