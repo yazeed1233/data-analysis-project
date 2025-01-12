@@ -4,12 +4,12 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "81:80"
+      - "83:80"
     depends_on:
-      - database
+      - db
 
-  database:
-    image: mysql
+  db:
+    image: mysql:8.0
     restart: always
     volumes:
       - mysql:/var/lib/mysql
