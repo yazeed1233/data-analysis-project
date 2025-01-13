@@ -75,16 +75,13 @@ $conn->close();
             flex-direction: column;
             align-items: center;
         }
-        input[type="text"] {
-            padding: 15px;
-            width: 100%;
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
             margin-bottom: 20px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.1em;
-            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        input[type="submit"] {
+        .button {
             padding: 15px 25px;
             background: linear-gradient(to right, #4CAF50, #2e7d32);
             color: white;
@@ -92,11 +89,16 @@ $conn->close();
             border-radius: 10px;
             cursor: pointer;
             font-size: 1.2em;
-            transition: background 0.3s ease, transform 0.2s;
+            transition: background 0.3s ease, transform 0.2s, box-shadow 0.3s ease;
         }
-        input[type="submit"]:hover {
+        .button:hover {
             background: linear-gradient(to right, #45a049, #1b5e20);
             transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5);
+        }
+        .button:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 5px rgba(0, 255, 0, 0.3);
         }
         .definition {
             margin-top: 30px;
@@ -109,13 +111,24 @@ $conn->close();
             color: #f8f8f8;
         }
     </style>
+    <script>
+        function setWord(word) {
+            document.getElementById('word-input').value = word;
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Simple Dictionary</h1>
         <p class="description">"Simple Dictionary" provides quick and easy word definitions through a user-friendly interface.</p>
         <form method="post">
-            <input type="text" name="word" placeholder="Enter a word" required>
+            <div class="buttons">
+                <button type="button" class="button" onclick="setWord('hello')">Hello</button>
+                <button type="button" class="button" onclick="setWord('world')">World</button>
+                <button type="button" class="button" onclick="setWord('php')">PHP</button>
+                <button type="button" class="button" onclick="setWord('javascript')">JavaScript</button>
+            </div>
+            <input type="hidden" id="word-input" name="word">
             <input type="submit" value="Search">
         </form>
         <div class="definition">
