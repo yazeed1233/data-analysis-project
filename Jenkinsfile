@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh 'cd data-analysis-project && ls -l'
                 sh 'docker compose down'
-                sh 'docker compose up'
+                sh 'docker compose up -d'
             }
         }
     }

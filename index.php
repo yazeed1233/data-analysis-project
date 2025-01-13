@@ -2,7 +2,7 @@
 
 <?php
 // Database connection settings
-$host = 'localhost'; // Change if your MySQL server is on a different host
+$host = 'db'; // Change if your MySQL server is on a different host
 $dbname = 'dictionary';
 $username = 'root'; // Change to your MySQL username
 $password = 'password'; // Change to your MySQL password
