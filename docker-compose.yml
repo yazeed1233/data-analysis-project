@@ -3,6 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - ./site:/var/www/html
     ports:
       - "83:80"
     depends_on:
