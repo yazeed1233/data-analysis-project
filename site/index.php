@@ -1,5 +1,3 @@
-
-
 <?php
 // Database connection settings
 $host = 'db'; // Change if your MySQL server is on a different host
@@ -41,7 +39,7 @@ $conn->close();
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
-            background-color: #f0f0f0;
+            background-color: #d3d3d3; /* Light gray background */
             color: #333;
             text-align: center;
             padding: 50px;
@@ -68,7 +66,7 @@ $conn->close();
     </style>
 </head>
 <body>
-    <h1>Simple koko</h1>
+    <h1>Simple Dictionary</h1>
     <form method="post">
         <input type="text" name="word" placeholder="Enter a word" required>
         <input type="submit" value="Search">
