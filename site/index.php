@@ -68,7 +68,7 @@ $conn->close();
     </style>
 </head>
 <body>
-    <h1>Simple</h1>
+    <h1>Simple koko</h1>
     <form method="post">
         <input type="text" name="word" placeholder="Enter a word" required>
         <input type="submit" value="Search">
