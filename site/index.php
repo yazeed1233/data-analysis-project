@@ -41,7 +41,7 @@ $conn->close();
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+            background: linear-gradient(135deg, #a8dadc, #f1faee);
             color: #333;
             text-align: center;
             margin: 0;
@@ -63,12 +63,12 @@ $conn->close();
         h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            color: #4CAF50;
+            color: #1d3557;
         }
         p.description {
             font-size: 1.2em;
             margin-bottom: 20px;
-            color: #666;
+            color: #457b9d;
         }
         input[type="text"] {
             padding: 12px;
@@ -80,7 +80,7 @@ $conn->close();
         }
         input[type="submit"] {
             padding: 12px 20px;
-            background-color: #4CAF50;
+            background-color: #1d3557;
             color: white;
             border: none;
             border-radius: 8px;
@@ -89,7 +89,7 @@ $conn->close();
             transition: background-color 0.3s ease, transform 0.2s;
         }
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #457b9d;
             transform: scale(1.05);
         }
         .definition {
