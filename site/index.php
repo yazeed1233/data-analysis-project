@@ -39,56 +39,63 @@ $conn->close();
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+            background: linear-gradient(to bottom right, #1e3c72, #2a5298);
             color: #fff;
             text-align: center;
-            padding: 50px;
             margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
         }
         .container {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            max-width: 400px;
-            margin: auto;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
         }
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 3em;
+            margin-bottom: 20px;
         }
         p.description {
-            font-size: 1.2em;
+            font-size: 1.3em;
             margin-bottom: 30px;
         }
         input[type="text"] {
-            padding: 10px;
-            width: calc(100% - 22px);
+            padding: 15px;
+            width: calc(100% - 30px);
             margin-bottom: 20px;
             border: none;
-            border-radius: 5px;
-            font-size: 1em;
+            border-radius: 10px;
+            font-size: 1.2em;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         input[type="submit"] {
-            padding: 10px 20px;
+            padding: 15px 25px;
             background-color: #4CAF50;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, transform 0.2s;
         }
         input[type="submit"]:hover {
             background-color: #45a049;
+            transform: translateY(-2px);
         }
         .definition {
-            margin-top: 20px;
+            margin-top: 30px;
             font-size: 1.5em;
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.25);
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
         }
     </style>
 </head>
