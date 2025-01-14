@@ -37,75 +37,97 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Dictionary</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #a8dadc, #f1faee);
-            color: #333;
-            text-align: center;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+            color: #fff;
             margin: 0;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            overflow: hidden;
         }
+
         .container {
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 15px;
-            padding: 30px 40px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            max-width: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 40px 50px;
+            max-width: 450px;
             width: 90%;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
+
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #1d3557;
-        }
-        p.description {
-            font-size: 1.2em;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #457b9d;
+            color: #fff;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
         }
+
+        p.description {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #d0dce7;
+        }
+
         input[type="text"] {
-            padding: 12px;
+            padding: 14px 16px;
             width: 100%;
             margin-bottom: 20px;
-            border: 1px solid #ccc;
+            border: none;
             border-radius: 8px;
-            font-size: 1em;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            outline: none;
+            transition: background 0.3s ease;
         }
+
+        input[type="text"]:focus {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
         input[type="submit"] {
-            padding: 12px 20px;
-            background-color: #1d3557;
-            color: white;
+            padding: 14px 20px;
+            background-color: #ff6b6b;
+            color: #fff;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease, transform 0.2s;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
+
         input[type="submit"]:hover {
-            background-color: #457b9d;
+            background-color: #ff4c4c;
             transform: scale(1.05);
         }
+
         .definition {
             margin-top: 20px;
-            font-size: 1.2em;
+            font-size: 1.1rem;
             padding: 15px;
-            background-color: rgba(255, 255, 255, 0.6);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .definition p {
+            margin: 0;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Simple Dictionary</h1>
-        <p class="description">"Simple Dictionary" provides quick and easy word definitions through a user-friendly interface.</p>
+        <p class="description">Quickly find definitions of any word in a clean and modern interface.</p>
     
         <form method="post">
             <input type="text" name="word" placeholder="Enter a word" required>
