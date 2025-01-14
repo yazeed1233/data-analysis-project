@@ -106,6 +106,7 @@ $conn->close();
     <div class="container">
         <h1>Simple Dictionary</h1>
         <p class="description">"Simple Dictionary" provides quick and easy word definitions through a user-friendly interface.</p>
+        <p>hello</p>
         <form method="post">
             <input type="text" name="word" placeholder="Enter a word" required>
             <input type="submit" value="Search">
