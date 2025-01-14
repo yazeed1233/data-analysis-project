@@ -5,6 +5,7 @@ This is a simple dictionary web application that allows users to input a word an
 
 ## Project Supervisor
 - **Dr. Ahmed Awad**
+- **Eng. Ibrahim Amreya**
 
 ## Requirements
 To run this project, the following tools and technologies are required:
