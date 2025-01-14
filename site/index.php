@@ -41,8 +41,8 @@ $conn->close();
 
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(to bottom right, #1e3c72, #2a5298);
-            color: #fff;
+            background: #eaf6ff; /* خلفية باللون الأزرق الفاتح الخفيف */
+            color: #333;
             margin: 0;
             display: flex;
             align-items: center;
@@ -51,49 +51,49 @@ $conn->close();
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
             border-radius: 16px;
             padding: 40px 50px;
             max-width: 450px;
             width: 90%;
             text-align: center;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #fff;
-            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+            color: #1a3d6c; /* أزرق داكن للنص */
         }
 
         p.description {
             font-size: 1.1rem;
             margin-bottom: 30px;
-            color: #d0dce7;
+            color: #1a5276; /* أزرق متوسط */
         }
 
         input[type="text"] {
             padding: 14px 16px;
             width: 100%;
             margin-bottom: 20px;
-            border: none;
+            border: 1px solid #ccc;
             border-radius: 8px;
             font-size: 1rem;
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
+            background: #f9fcff;
+            color: #333;
             outline: none;
-            transition: background 0.3s ease;
+            transition: border-color 0.3s ease, background 0.3s ease;
         }
 
         input[type="text"]:focus {
-            background: rgba(255, 255, 255, 0.4);
+            border-color: #1a5276; /* تأثير عند التحديد */
+            background: #eaf6ff;
         }
 
         input[type="submit"] {
             padding: 14px 20px;
-            background-color: #ff6b6b;
+            background-color: #1a5276;
             color: #fff;
             border: none;
             border-radius: 8px;
@@ -104,7 +104,7 @@ $conn->close();
         }
 
         input[type="submit"]:hover {
-            background-color: #ff4c4c;
+            background-color: #14517a;
             transform: scale(1.05);
         }
 
@@ -112,10 +112,10 @@ $conn->close();
             margin-top: 20px;
             font-size: 1.1rem;
             padding: 15px;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.85);
             border-radius: 8px;
-            color: #fff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            color: #333;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .definition p {
