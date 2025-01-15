@@ -16,40 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `months`
+-- Table structure for table `words`
 --
 
-DROP TABLE IF EXISTS `months`;
+DROP TABLE IF EXISTS `words`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `months` (
+CREATE TABLE `words` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `gregorian_month` varchar(50) DEFAULT NULL,
-  `alternative_month` varchar(50) DEFAULT NULL,
+  `word` varchar(100) DEFAULT NULL,
+  `definition` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `months`
+-- Dumping data for table `words`
 --
 
-LOCK TABLES `months` WRITE;
-/*!40000 ALTER TABLE `months` DISABLE KEYS */;
-INSERT INTO `months` VALUES 
-(1, 'January', 'Kanun Al-Thani'),
-(2, 'February', 'Shubat'),
-(3, 'March', 'Adar'),
-(4, 'April', 'Nisan'),
-(5, 'May', 'Ayyar'),
-(6, 'June', 'Haziran'),
-(7, 'July', 'Tammuz'),
-(8, 'August', 'Ab'),
-(9, 'September', 'Aylul'),
-(10, 'October', 'Tishrin Al-Awwal'),
-(11, 'November', 'Tishrin Al-Thani'),
-(12, 'December', 'Kanun Al-Awwal');
-/*!40000 ALTER TABLE `months` ENABLE KEYS */;
+LOCK TABLES `words` WRITE;
+/*!40000 ALTER TABLE `words` DISABLE KEYS */;
+INSERT INTO `words` VALUES (1,'apple','A fruit that is typically red, green, or yellow.'),(2,'banana','A long curved fruit that grows in clusters and has soft pulpy flesh and yellow skin when ripe.'),(3,'cherry','A small, round fruit that is typically red or black.'),(4,'date','The sweet fruit of the date palm, often eaten dried.'),(5,'elderberry','A small dark purple fruit that grows in clusters on the elder tree.');
+/*!40000 ALTER TABLE `words` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -61,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-15 19:23:53
+-- Dump completed on 2025-01-12 19:23:53
