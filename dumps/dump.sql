@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS `months`;
 CREATE TABLE `months` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `gregorian_month` VARCHAR(50) NOT NULL, -- الاسم بالصيغة الجريجورية (الإنجليزية التقليدية)
-  `alternative_month` VARCHAR(50) NOT NULL, -- الاسم البديل (مثل Arabic equivalent بالإنجليزية)
+  `alternative_month` VARCHAR(50) NOT NULL, -- الاسم البديل بالإنجليزية
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
