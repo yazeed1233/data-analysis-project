@@ -57,8 +57,8 @@ The project is organized as follows:
 4. The application will display the definition (e.g., "A fruit that is typically red, green, or yellow.").
 
 ## Contributors
-- **Yazeed Rashed**
-- **Mahdy Adel**
+- **Yazeed Rashed** 11923915
+- **Mahdy Adel**   11900000
 
 ## Notes
 - For any questions or issues, please contact the contributors.
