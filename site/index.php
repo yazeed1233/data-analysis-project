@@ -1,14 +1,13 @@
 <?php
-// Database connection settings
-$host = 'db'; // Change if your MySQL server is on a different host
-$dbname = 'dictionary';
-$username = 'root'; // Change to your MySQL username
-$password = 'password'; // Change to your MySQL password
 
-// Create a connection
+$host = 'db'; 
+$dbname = 'dictionary';
+$username = 'root'; 
+$password = 'password'; 
+
+
 $conn = new mysqli($host, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -41,7 +40,7 @@ $conn->close();
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #eaf6ff; /* خلفية باللون الأزرق الفاتح الخفيف */
+            background: #eaf6ff; 
             color: #333;
             margin: 0;
             display: flex;
@@ -64,13 +63,13 @@ $conn->close();
         h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #1a3d6c; /* أزرق داكن للنص */
+            color: #1a3d6c; 
         }
 
         p.description {
             font-size: 1.1rem;
             margin-bottom: 30px;
-            color: #1a5276; /* أزرق متوسط */
+            color: #1a5276; 
         }
 
         input[type="text"] {
@@ -87,7 +86,7 @@ $conn->close();
         }
 
         input[type="text"]:focus {
-            border-color: #1a5276; /* تأثير عند التحديد */
+            border-color: #1a5276; 
             background: #eaf6ff;
         }
 
