@@ -125,7 +125,7 @@ $conn->close();
 </head>
 <body>
     <div class="container">
-        <h1>Our Dictionary </h1>
+        <h1>Our Dictionary mahdyyyyy </h1>
         <p class="description">Quickly find definitions of any word in a clean and modern interface.</p>
     
         <form method="post">
